@@ -1,0 +1,182 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    margin: 0;
+    padding: 0;
+}
+
+/* ^ Codigo para normalizar los estilos, debe estar siempre */
+
+body {
+    min-height: 100vh;
+    background: rgb(15,23,42);
+    background: linear-gradient(180deg, rgba(15,23,42,1) 0%, rgba(15,54,147,1) 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    height: 4rem;
+    background-color: #111827;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 0.4rem;
+    box-shadow: 0 10px 100px rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.header-icon {
+    width: 2rem;
+}
+
+.header-title {
+    color: white;
+    text-decoration: none;
+}
+
+.main-container {
+    /* height: 100%; */
+    padding-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.country-search-container {
+    background-color: #111827 ;
+    width: 80%;
+    height: 8rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 10px 100px rgba(0,0,0,.1);
+}
+
+
+
+.form-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: #374151;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.form-btn:hover{
+    background-color: #5a626e;
+}
+
+.form-btn-icon {
+    width: 1.5rem;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid grey;
+    padding: 0 0.5rem;
+    border-radius: 0.2rem;
+}
+
+input {
+    background-color: #111827;
+    border: none;
+    height: 2rem;
+    outline: none;
+    color: white;
+}
+
+
+
+#country-info {
+    display: grid;
+    padding: 1rem;
+    grid-gap: 1rem;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.country-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    justify-content: center;
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+
+.country-card-details {
+    background-color: white;
+    flex-direction: column;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    height: 18rem;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.country-flag {
+    width: 40%;
+}
+
+.country-text-info {
+    color: white;
+}
+
+@media screen and (min-width:768px) {
+    .country-search-container {
+        height: 10rem;
+        width: 50%;
+    }
+    input {
+        width: 20rem;
+    }
+    .columns{
+        grid-template-columns: repeat(2, 23rem);
+    }
+    .country-card-details {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+        .columns{
+            grid-template-columns: repeat(3, 20rem);
+        }
+        .country-card-details {
+            width: 50%;
+            height: 20rem;
+        }
+}
+
+    
