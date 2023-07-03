@@ -86,7 +86,7 @@ if (inputCountry.value === '') {
         const getWeather = async () => {
             try {
                 // const response = await (await fetch('https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=ebc7989613fd848ce3a1ea3dcdbcd7f5')).json();
-                const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?lat=${p.latlng[0]}&lon=${p.latlng[1]}&appid=ebc7989613fd848ce3a1ea3dcdbcd7f5&lang=es&units=metric`);
+                const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?lat=${p.latlng[0]}&lon=${p.latlng[1]}&appid=ebc7989613fd848ce3a1ea3dcdbcd7f5&units=metric`);
                 const data = await response.json();
         
                 clima = data; 
