@@ -60,7 +60,7 @@ if (inputCountry.value === '') {
     else if(filteredCountries.length > 10) {
         countryInfo.classList.remove('columns')
         countryInfo.innerHTML= `
-        <p class="country-text-info">Tu búsqueda tiene que ser más específica</p>
+        <p class="country-text-info">Your search has to be more specific please.</p>
         `;
         return
     } 
@@ -95,17 +95,17 @@ if (inputCountry.value === '') {
                 countryInfo.innerHTML= `
             <div class="country-card-details">
                 <img class="country-flag" src="${p.flags.svg}">
-                <span>País: ${p.name.common}</span>
+                <span>Country: ${p.name.common}</span>
                 <span>Capital: ${p.capital[0]} </span>
-                <span>Habitantes: ${p.population}</span>
-                <span>Región: ${p.region}</span>
-                <span>Temperatura: ${clima.main.feels_like}°</span>
-                <span>Clima actual: ${clima.weather[0].description}</span>
+                <span>Population: ${p.population}</span>
+                <span>Region: ${p.region}</span>
+                <span>Tempeture: ${clima.main.feels_like}°</span>
+                <span>Current weather: ${clima.weather[0].description}</span>
              </div>
             `;
         
             } catch (error) {
-                alert('Hubo un error con tu internet.')
+                alert('There was an error with your internet.')
             }
         };
             
@@ -117,7 +117,7 @@ if (inputCountry.value === '') {
   else if (filteredCountries.length === 0) {
     countryInfo.classList.remove('columns');
     countryInfo.innerHTML= `
-        <p class="country-text-info">No existe un país con esos caracteres.</p>
+        <p class="country-text-info">Sorry, there is no country with those characters.</p>
         `;
         return;
   }
