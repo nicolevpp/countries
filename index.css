@@ -13,7 +13,7 @@
 body {
     min-height: 100vh;
     background: rgb(15,23,42);
-    background: linear-gradient(180deg, rgba(15,23,42,1) 0%, rgba(15,54,147,1) 100%);
+    background: linear-gradient(90deg, rgba(15,23,42,1) 0%, rgba(24,74,130,1) 50%, rgba(15,23,42,1) 100%);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -44,6 +44,23 @@ body {
 .header-title {
     color: white;
     text-decoration: none;
+}
+
+
+
+.loader {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    color: white;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-icon {
+    width: 5rem;
 }
 
 .main-container {
@@ -156,6 +173,8 @@ form:focus-within  {
 .country-text-info {
     color: white;
 }
+
+
 
 @media screen and (min-width:768px) {
     .country-search-container {

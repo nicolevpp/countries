@@ -2,6 +2,8 @@ const form = document.querySelector('#form');
 const formBtn = document.querySelector('#form-btn');
 const inputCountry = document.querySelector('#input-country');
 const countryInfo = document.querySelector('#country-info');
+const searchContainer = document.querySelector('#search-container');
+const loader = document.querySelector('#loader');
 
 
 let countries = [];
@@ -9,11 +11,19 @@ let countries = [];
 // API DE PAISES
 
 const getCountry = async () => {
-    try {
+    try {    
+
+        searchContainer.style.display = 'none';
+
         // siempre que utilicemos una api tenemos que utilizar await
         const response = await (await fetch('https://restcountries.com/v3.1/all')).json();
 
         countries = response;
+       
+        if (response) {
+            loader.style.display = 'none';
+            searchContainer.style.display = 'flex';
+        }
 
     } catch (error) {
         alert('Hubo un error con tu internet.')
